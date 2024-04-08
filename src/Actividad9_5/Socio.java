@@ -22,11 +22,15 @@ class Socio {
     public String toString() {
         return " Nombre: " + nombre + ", edad: " + edad;
     }
-}
 
-class ComparadorPorNombre implements Comparator<Socio> {
+
+public static class ComparadorNombre implements Comparator {
     @Override
-    public int compare(Socio socio1, Socio socio2) {
-        return socio1.getNombre().compareTo(socio2.getNombre());
+    public int compare(Object socio1, Object socio2) {
+        String nombreSocio1 = ((Socio) socio1).getNombre();
+        String nombreSocio2 = ((Socio) socio2).getNombre();
+        return nombreSocio1.compareTo(nombreSocio2);
     }
 }
+}
+
