@@ -17,7 +17,7 @@ public class Main {
             System.out.println(socio);
         }
 
-        // Ordenar los socios por nombre usando ComparadorPorNombre
+        // Ordenar los socios por nombre
         Socio.ComparadorNombre comparador = new Socio.ComparadorNombre();
         Arrays.sort(socios, comparador);
 
